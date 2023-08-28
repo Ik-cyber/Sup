@@ -321,7 +321,7 @@ i{
 
   
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 800px) {
   .img-div {
     height: 150px;
   }
