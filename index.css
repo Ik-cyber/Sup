@@ -286,6 +286,7 @@ span{
 
 i{
   font-style: normal;
+  font-size: 1.5rem;
   font-weight: 900;
   letter-spacing: 4px;
   font-family: 'Dancing Script', cursive;
@@ -309,9 +310,7 @@ i{
 	:root{
 		--headingSize: 25px;
 	}
-}
-
-
+} 
 
 
 
@@ -321,7 +320,7 @@ i{
 
   
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .img-div {
     height: 150px;
   }
@@ -436,6 +435,7 @@ i{
   }
   .abtme {
     padding-bottom: 2rem;
+    
   }
   .abtme h3 {
     color: whitesmoke;
