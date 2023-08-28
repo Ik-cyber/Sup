@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta
+      meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="index.css" />
+    <script src="code.jquery.com_jquery-3.7.0.js"></script>
+    <script>
+      $(document).ready(function () {
+        window.setTimeout("fadeout();", 50);
+      });
+
+      function fadeout() {
+        $("#preloader")
+          .delay(500)
+          .fadeOut("slow", function () {
+            $(".notLoaded").removeClass("notLoaded");
+          });
+      }
+
+
+
+      $(function() {
+	var Accordion = function(el, multiple) {
+		this.el = el || {};
+		this.multiple = multiple || false;
+
+		// Variables privadas
+		var links = this.el.find('.link');
+		// Evento
+		links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+	}
+
+	Accordion.prototype.dropdown = function(e) {
+		var $el = e.data.el;
+			$this = $(this),
+			$next = $this.next();
+
+		$next.slideToggle();
+		$this.parent().toggleClass('open');
+
+		if (!e.data.multiple) {
+			$el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+		};
+	}	
+
+	var accordion = new Accordion($('#accordion'), false);
+});
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,900&family=Dancing+Script:wght@700&family=REM:ital,wght@0,100;0,500;0,600;0,900;1,900&display=swap");
+    </style>
+  </head>
+  <body>
+    <div id="preloader">
+      <!-- partial:index.partial.html -->
+      <div class="scene">
+        <div class="cube-wrapper">
+          <div class="cube">
+            <div class="cube-faces">
+              <div class="cube-face shadow"></div>
+              <div class="cube-face bottom"></div>
+              <div class="cube-face top"></div>
+              <div class="cube-face left"></div>
+              <div class="cube-face right"></div>
+              <div class="cube-face back"></div>
+              <div class="cube-face front"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- partial -->
+    </div>
+
+    <div>
+      <div class="img-div">
+        <img src="logo4.png" alt="" width="300px" />
+      </div>
+      <div class="nnav">
+        <ul>
+          <li><a href="index.html" class="active animate-charcter">Home</a></li>
+          <li><a href="about.html" class="animate-charcter">About</a></li>
+          <li><a href="info.html" class="animate-charcter">Info</a></li>
+          <li><a href="contact.html" class="animate-charcter">Contact</a></li>
+        </ul>
+      </div>
+    <div>
+      <div class="section1txt">
+        <div class="herosection-txt">
+          <div>
+          <h2>Hi, I'm Sopuruchi</h2>
+          <p>I'm a Fashion Designer.</p>
+        </div>
+        <div class="adjust">
+
+        </div>
+        </div>
+        <div class="herosection-img">
+          <img src="img1.png" class="img1" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="abtme">
+        <h3>Fashion Designer and also a Medical Laboratory Scientist</h3>
+        <div class="container">
+          <h1 class="swift-up-text">My love and passion for Fashion came form the world and people around me. It allows me to express my creative side. For me fashion is more than just clothing. It's an art form that speaks to our identity, our culture, and our values. It's a way to express ourselves and connect with others. Fashion is about taking risks, pushing boundaries, and creating something new and exciting. It's about daring to be different and standing out in a sea of sameness. It's a celebration of self-expression and individuality
+      </h1>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class=" skills">
+        <h3>I specializie mostly in Bridal Accessories Such as </h3>
+
+        <ul id="accordion" class="accordion">
+          <li>
+            <div class="link">veil<i class="fa fa-chevron-down"></i></div>
+          </li>
+          <li>
+            <div class="link">Bouquet<i class="fa fa-chevron-down"></i></div>
+          </li>
+          <li>
+            <div class="link">Hair accessories<i class="fa fa-chevron-down"></i></div>
+            <ul class="submenu">
+              <li><a href="#">Tablet</a></li>
+              <li><a href="#">Mobile</a></li>
+              <li><a href="#">Desktop</a></li>
+            </ul>
+          </li>
+          <li>
+            <div class="link">Jewelry<i class="fa fa-chevron-down"></i></div>
+            
+          </li>
+          <li>
+            <div class="link">Garter<i class="fa fa-chevron-down"></i></div>
+           
+          </li>
+          <li>
+            <div class="link">Undergarments<i class="fa fa-chevron-down"></i></div>
+           
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <div class="abt-sec contact">
+        <h2>Pls feel free to</h2>
+        <button><a href="contact.html">Contact Me</a></button>
+        <!-- <div class="contact-control">
+
+        </div> -->
+      </div>
+    </section>
+    <div class="correct"></div>
+
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+
+    <script>
+            function myFuun() {
+
+      }
+            document.getElementById("myBtn").addEventListener("click", function() {
+        alert("Hello World!")});
+    </script>
+ 
+    <script src="index.js"></script>
+  </body>
+</html>
